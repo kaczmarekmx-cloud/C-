@@ -1,82 +1,81 @@
-# C — Programowanie Niskopoziomowe
+# C — Low-Level Programming
 
-Projekty z zajęć akademickich z języka C.
+Academic projects from C programming classes.
 
-> ⚠️ Projekty uczelniane — kod pisany w celach edukacyjnych.
+> ⚠️ University projects — code written for educational purposes.
 
 ---
 
-## 📁 Zajęcia
+## 📁 Projects
 
-| Plik | Temat |
+| File | Topic |
 |---|---|
-| `digits10.c` | Liczenie cyfr dziesiętnych — dwa algorytmy |
-| `zgadnij_liczbe.c` | Zgadywanie liczby — algorytm binarny |
-| `montecarlo.c` | Przybliżenie PI — metoda Monte Carlo |
-| `swap_tablica.c` | Odwracanie tablicy — rekurencja i wskaźniki |
+| `digits10.c` | Counting decimal digits — two algorithms |
+| `zgadnij_liczbe.c` | Number guessing — binary search algorithm |
+| `montecarlo.c` | PI approximation — Monte Carlo method |
+| `swap_tablica.c` | Array reversal — recursion and pointers |
 
 ---
 
-## 📝 Zajęcia 1 — Liczenie cyfr dziesiętnych
+## 📝 Classes 1 — Counting Decimal Digits
 
-Dwie implementacje funkcji liczącej liczbę cyfr dziesiętnych dla podanej liczby.
+Two implementations of a function counting the number of decimal digits.
 
-### Algorytmy
+### Algorithms
 
-**`digits10_classic`** — podejście klasyczne (pętla z dzieleniem przez 10)
+**`digits10_classic`** — classic approach (loop with division by 10)
 
-**`digits10_andrei`** — podejście zoptymalizowane (porównania progowe + skok co 4 cyfry)
+**`digits10_andrei`** — optimized approach (threshold comparisons + jump every 4 digits)
 
-### Testowanie
-Program testuje spójność obu algorytmów dla losowych danych (`srand()` / `rand()`).
+### Testing
+Program tests consistency between both algorithms using random data (`srand()` / `rand()`).
 
-### Przykład działania
+### Example output
 ```
-długość 1234 to 4, a wyszło classic: 4
-długość 1234 to 4, a wyszło andrei:  4
-długość 0 to 1,    a wyszło classic: 1
-długość 0 to 1,    a wyszło andrei:  1
+length of 1234 is 4, classic: 4
+length of 1234 is 4, andrei:  4
+length of 0 is 1,    classic: 1
+length of 0 is 1,    andrei:  1
 ```
-### Inspiracja
-Algorytm Andrei — [Andrei Alexandrescu — Three Optimization Tips for C++](https://youtu.be/o4-CwDo2zpg)
+### Inspiration
+Andrei algorithm — [Andrei Alexandrescu — Three Optimization Tips for C++](https://youtu.be/o4-CwDo2zpg)
 
 ---
 
+## 📝 Classes 2 — Number Guessing
 
-## 📝 Zajęcia 2 — Zgadywanie liczby
+Program guesses a number chosen by the user in range 0-100.
 
-Program zgaduje wybraną przez użytkownika liczbę z zakresu 0-100.
+### Algorithm
+Binary search — the program halves the range with each question,
+guaranteeing to guess the number in at most 7 steps.
 
-### Algorytm
-Wyszukiwanie binarne — program dzieli zakres na pół przy każdym pytaniu,
-co gwarantuje odgadnięcie liczby w maksymalnie 7 krokach.
-
-### Przykład działania
+### Example output
 ```
-Czy Twoja liczba jest większa, mniejsza lub równa 50? >
-Czy Twoja liczba jest większa, mniejsza lub równa 75?
-Czy Twoja liczba jest większa, mniejsza lub równa 62? =
-Odgadłem! Twoja liczba to 62
+Is your number greater, lesser or equal to 50? >
+Is your number greater, lesser or equal to 75?
+Is your number greater, lesser or equal to 62? =
+Guessed! Your number is 62
 ```
-### Sterowanie
-| Znak | Znaczenie |
+### Controls
+| Key | Meaning |
 |---|---|
-| `<` | Twoja liczba jest mniejsza |
-| `>` | Twoja liczba jest większa |
-| `=` | Trafiłem |
+| `<` | Your number is smaller |
+| `>` | Your number is greater |
+| `=` | Correct |
 
 ---
 
-## 📝 Zajęcia 3 — Przybliżenie liczby PI (Monte Carlo)
+## 📝 Classes 3 — PI Approximation (Monte Carlo)
 
-Program przybliża wartość liczby PI metodą Monte Carlo.
+Program approximates the value of PI using the Monte Carlo method.
 
-### Algorytm
-Losuje punkty `(x, y)` z zakresu `[0, 1]`. Jeśli punkt trafia w ćwiartkę
-koła (`x² + y² ≤ 1`), zaliczany jest jako trafiony. Stosunek trafionych
-do wszystkich punktów przybliża PI/4.
+### Algorithm
+Randomly generates points `(x, y)` in range `[0, 1]`. If a point lands
+inside the quarter circle (`x² + y² ≤ 1`), it counts as a hit. The ratio
+of hits to total points approximates PI/4.
 
-### Przykład działania
+### Example output
 ```
 n=100:      pi ≈ 3.120000
 n=1000:     pi ≈ 3.144000
@@ -84,28 +83,30 @@ n=10000:    pi ≈ 3.141200
 n=1000000:  pi ≈ 3.141460
 n=10000000: pi ≈ 3.141573
 ```
-Im większe `n` tym dokładniejszy wynik.
+The larger `n`, the more accurate the result.
 
 ---
 
-## 📝 Zajęcia 4 — Odwracanie tablicy
+## 📝 Classes 4 — Array Reversal
 
-Program odwraca tablicę liczb całkowitych używając rekurencji i wskaźników.
+Program reverses an integer array using recursion and pointers.
 
-### Algorytm
-1. Jeśli `begin >= end` — zakończ (tablica odwrócona)
-2. Zamień miejscami elementy `begin` i `end`
-3. Wywołaj rekurencyjnie dla `begin+1` i `end-1`
+### Algorithm
+1. If `begin >= end` — stop (array is reversed)
+2. Swap elements at `begin` and `end`
+3. Call recursively for `begin+1` and `end-1`
 
-### Przykład działania
-
+### Example output
 ```
-przed: 1 2 3 4 5 6 7 8
-po:    8 7 6 5 4 3 2 1
+before: 1 2 3 4 5 6 7 8
+after:    8 7 6 5 4 3 2 1
 ```
-### Kluczowe koncepty
-- **Wskaźniki** — `*a`, `*b` — bezpośredni dostęp do pamięci
-- **Rekurencja** — funkcja wywołuje samą siebie
-- **swap** — zamiana wartości przez wskaźniki
+### Key concepts
+- **Pointers** — `*a`, `*b` — direct memory access
+- **Recursion** — function calls itself
+- **swap** — value exchange via pointers
 
 ---
+
+## Technologies
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
