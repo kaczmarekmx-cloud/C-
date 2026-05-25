@@ -15,6 +15,7 @@ Academic projects from C programming classes.
 | `montecarlo.c` | PI approximation — Monte Carlo method |
 | `swap_tablica.c` | Array reversal — recursion and pointers |
 | `vector.c` | 2D vectors — structs, pointers, scalar operations |
+| `stack.c` | Dynamic stack — structs, dynamic memory, realloc |
 
 ---
 
@@ -143,6 +144,47 @@ po move: (4.00, 6.00)
 - **Structs** — custom data types grouping related values
 - **Pointers** — `vec_move` modifies the original via `*target`
 - **Scalar multiplication** — scaling a vector by a single value
+
+---
+
+## 📝 Classes 6 — Dynamic Stack
+
+Implementation of a dynamic stack using a struct and dynamic memory allocation.
+
+### Structure
+```c
+struct stack {
+    int *dane;      // pointer to data array
+    int  rozmiar;   // current number of elements
+    int  pojemnosc; // current array capacity
+};
+```
+
+### Operations
+| Function | Description |
+|---|---|
+| `stkpush(&s, value)` | Pushes value onto the stack |
+| `stkpop(&s)` | Removes top element |
+| `stktop(s)` | Returns top element without removing |
+| `stklen(s)` | Returns number of elements |
+| `stkfree(&s)` | Frees allocated memory |
+| `stkprint(s)` | Prints current stack state |
+
+### Example output
+```
+
+stos (1 elementów): 10 ← szczyt
+stos (2 elementów): 10 20 ← szczyt
+stos (3 elementów): 10 20 30 ← szczyt
+top: 30
+len: 3
+stos (2 elementów): 10 20 ← szczyt
+stos (1 elementów): 10 ← szczyt
+```
+### Key concepts
+- **Dynamic memory** — `realloc` doubles capacity when stack is full
+- **LIFO** — Last In, First Out
+- **Memory management** — `stkfree` prevents memory leaks
 
 ## Technologies
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
