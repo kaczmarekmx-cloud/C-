@@ -107,3 +107,5 @@ po:    8 7 6 5 4 3 2 1
 - **Wskaźniki** — `*a`, `*b` — bezpośredni dostęp do pamięci
 - **Rekurencja** — funkcja wywołuje samą siebie
 - **swap** — zamiana wartości przez wskaźniki
+
+---
