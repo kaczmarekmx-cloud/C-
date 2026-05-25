@@ -18,8 +18,8 @@ Academic projects from C programming classes.
 | `stack.c` | Dynamic stack — structs, dynamic memory, realloc |
 
 ---
-
-## 📝 Classes 1 — Counting Decimal Digits
+<details>
+<summary>📝 Classes 1 — Counting Decimal Digits</summary>
 
 Two implementations of a function counting the number of decimal digits.
 
@@ -172,7 +172,6 @@ struct stack {
 
 ### Example output
 ```
-
 stos (1 elementów): 10 ← szczyt
 stos (2 elementów): 10 20 ← szczyt
 stos (3 elementów): 10 20 30 ← szczyt
