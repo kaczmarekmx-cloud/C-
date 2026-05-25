@@ -12,6 +12,7 @@ Projekty z zajęć akademickich z języka C.
 |---|---|
 | `digits10.c` | Liczenie cyfr dziesiętnych — dwa algorytmy |
 | `zgadnij_liczbe.c` | Zgadywanie liczby — algorytm binarny |
+| `montecarlo.c` | Przybliżenie PI — metoda Monte Carlo |
 
 ---
 
@@ -40,8 +41,6 @@ Algorytm Andrei — [Andrei Alexandrescu — Three Optimization Tips for C++](ht
 
 ---
 
-## Technologie
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 
 ## 📝 Zajęcia 2 — Zgadywanie liczby
 
@@ -64,3 +63,25 @@ Odgadłem! Twoja liczba to 62
 | `<` | Twoja liczba jest mniejsza |
 | `>` | Twoja liczba jest większa |
 | `=` | Trafiłem |
+
+---
+
+## 📝 Zajęcia 3 — Przybliżenie liczby PI (Monte Carlo)
+
+Program przybliża wartość liczby PI metodą Monte Carlo.
+
+### Algorytm
+Losuje punkty `(x, y)` z zakresu `[0, 1]`. Jeśli punkt trafia w ćwiartkę
+koła (`x² + y² ≤ 1`), zaliczany jest jako trafiony. Stosunek trafionych
+do wszystkich punktów przybliża PI/4.
+
+### Przykład działania
+
+n=100:      pi ≈ 3.120000
+n=1000:     pi ≈ 3.144000
+n=10000:    pi ≈ 3.141200
+n=1000000:  pi ≈ 3.141460
+n=10000000: pi ≈ 3.141573
+
+Im większe `n` tym dokładniejszy wynik.
+
