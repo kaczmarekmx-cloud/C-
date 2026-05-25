@@ -14,6 +14,7 @@ Academic projects from C programming classes.
 | `zgadnij_liczbe.c` | Number guessing — binary search algorithm |
 | `montecarlo.c` | PI approximation — Monte Carlo method |
 | `swap_tablica.c` | Array reversal — recursion and pointers |
+| `vector.c` | 2D vectors — structs, pointers, scalar operations |
 
 ---
 
@@ -107,6 +108,41 @@ after:    8 7 6 5 4 3 2 1
 - **swap** — value exchange via pointers
 
 ---
+
+## 📝 Classes 5 — 2D Vector Operations
+
+Implementation of a 2D vector structure with basic mathematical operations.
+
+### Structure
+```c
+struct vec2 {
+    float x;
+    float y;
+};
+```
+
+### Operations
+| Function | Description |
+|---|---|
+| `vec_add(a, b)` | Adds two vectors |
+| `vec_sub(a, b)` | Subtracts two vectors |
+| `vec_mul(a, scalar)` | Multiplies vector by scalar |
+| `vec_move(&target, translation)` | Moves vector in place (modifies original) |
+| `vec2_print(v)` | Prints vector in format `(x, y)` |
+
+### Example output
+```
+a: (1.00, 2.00)
+b: (3.00, 4.00)
+add: (4.00, 6.00)
+sub: (-2.00, -2.00)
+mul x3: (3.00, 6.00)
+po move: (4.00, 6.00)
+```
+### Key concepts
+- **Structs** — custom data types grouping related values
+- **Pointers** — `vec_move` modifies the original via `*target`
+- **Scalar multiplication** — scaling a vector by a single value
 
 ## Technologies
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
