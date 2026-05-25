@@ -19,7 +19,7 @@ Academic projects from C programming classes.
 
 ---
 <details>
-<summary>📝 Classes 1 — Counting Decimal Digits</summary>
+<summary>##📝 Classes 1 — Counting Decimal Digits</summary>
 
 Two implementations of a function counting the number of decimal digits.
 
