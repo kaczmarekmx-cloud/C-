@@ -11,6 +11,7 @@ Projekty z zajęć akademickich z języka C.
 | Plik | Temat |
 |---|---|
 | `digits10.c` | Liczenie cyfr dziesiętnych — dwa algorytmy |
+| `zgadnij_liczbe.c` | Zgadywanie liczby — algorytm binarny |
 
 ---
 
@@ -41,3 +42,25 @@ Algorytm Andrei — [Andrei Alexandrescu — Three Optimization Tips for C++](ht
 
 ## Technologie
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+
+## 📝 Zajęcia 2 — Zgadywanie liczby
+
+Program zgaduje wybraną przez użytkownika liczbę z zakresu 0-100.
+
+### Algorytm
+Wyszukiwanie binarne — program dzieli zakres na pół przy każdym pytaniu,
+co gwarantuje odgadnięcie liczby w maksymalnie 7 krokach.
+
+### Przykład działania
+
+Czy Twoja liczba jest większa, mniejsza lub równa 50? >
+Czy Twoja liczba jest większa, mniejsza lub równa 75?
+Czy Twoja liczba jest większa, mniejsza lub równa 62? =
+Odgadłem! Twoja liczba to 62
+
+### Sterowanie
+| Znak | Znaczenie |
+|---|---|
+| `<` | Twoja liczba jest mniejsza |
+| `>` | Twoja liczba jest większa |
+| `=` | Trafiłem |
