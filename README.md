@@ -10,7 +10,7 @@ Projekty z zajęć akademickich z języka C.
 
 | Plik | Temat |
 |---|---|
-| `zajecia1.c` | Liczenie cyfr dziesiętnych — dwa algorytmy |
+| `digits10.c` | Liczenie cyfr dziesiętnych — dwa algorytmy |
 
 ---
 
