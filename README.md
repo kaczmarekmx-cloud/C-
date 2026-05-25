@@ -19,7 +19,7 @@ Academic projects from C programming classes.
 
 ---
 <details>
-<summary>##📝 Classes 1 — Counting Decimal Digits</summary>
+<summary><strong>📝 Classes 1 — Counting Decimal Digits</strong></summary>
 
 Two implementations of a function counting the number of decimal digits.
 
@@ -43,7 +43,7 @@ length of 0 is 1,    andrei:  1
 Andrei algorithm — [Andrei Alexandrescu — Three Optimization Tips for C++](https://youtu.be/o4-CwDo2zpg)
 
 ---
-
+</details>
 ## 📝 Classes 2 — Number Guessing
 
 Program guesses a number chosen by the user in range 0-100.
