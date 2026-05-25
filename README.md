@@ -13,6 +13,7 @@ Projekty z zajęć akademickich z języka C.
 | `digits10.c` | Liczenie cyfr dziesiętnych — dwa algorytmy |
 | `zgadnij_liczbe.c` | Zgadywanie liczby — algorytm binarny |
 | `montecarlo.c` | Przybliżenie PI — metoda Monte Carlo |
+| `swap_tablica.c` | Odwracanie tablicy — rekurencja i wskaźniki |
 
 ---
 
@@ -85,3 +86,24 @@ n=10000000: pi ≈ 3.141573
 ```
 Im większe `n` tym dokładniejszy wynik.
 
+---
+
+## 📝 Zajęcia 4 — Odwracanie tablicy
+
+Program odwraca tablicę liczb całkowitych używając rekurencji i wskaźników.
+
+### Algorytm
+1. Jeśli `begin >= end` — zakończ (tablica odwrócona)
+2. Zamień miejscami elementy `begin` i `end`
+3. Wywołaj rekurencyjnie dla `begin+1` i `end-1`
+
+### Przykład działania
+
+```
+przed: 1 2 3 4 5 6 7 8
+po:    8 7 6 5 4 3 2 1
+```
+### Kluczowe koncepty
+- **Wskaźniki** — `*a`, `*b` — bezpośredni dostęp do pamięci
+- **Rekurencja** — funkcja wywołuje samą siebie
+- **swap** — zamiana wartości przez wskaźniki
