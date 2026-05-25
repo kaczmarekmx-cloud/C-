@@ -30,12 +30,12 @@ Dwie implementacje funkcji liczącej liczbę cyfr dziesiętnych dla podanej licz
 Program testuje spójność obu algorytmów dla losowych danych (`srand()` / `rand()`).
 
 ### Przykład działania
-
+```
 długość 1234 to 4, a wyszło classic: 4
 długość 1234 to 4, a wyszło andrei:  4
 długość 0 to 1,    a wyszło classic: 1
 długość 0 to 1,    a wyszło andrei:  1
-
+```
 ### Inspiracja
 Algorytm Andrei — [Andrei Alexandrescu — Three Optimization Tips for C++](https://youtu.be/o4-CwDo2zpg)
 
@@ -51,12 +51,12 @@ Wyszukiwanie binarne — program dzieli zakres na pół przy każdym pytaniu,
 co gwarantuje odgadnięcie liczby w maksymalnie 7 krokach.
 
 ### Przykład działania
-
+```
 Czy Twoja liczba jest większa, mniejsza lub równa 50? >
 Czy Twoja liczba jest większa, mniejsza lub równa 75?
 Czy Twoja liczba jest większa, mniejsza lub równa 62? =
 Odgadłem! Twoja liczba to 62
-
+```
 ### Sterowanie
 | Znak | Znaczenie |
 |---|---|
@@ -76,12 +76,12 @@ koła (`x² + y² ≤ 1`), zaliczany jest jako trafiony. Stosunek trafionych
 do wszystkich punktów przybliża PI/4.
 
 ### Przykład działania
-
+```
 n=100:      pi ≈ 3.120000
 n=1000:     pi ≈ 3.144000
 n=10000:    pi ≈ 3.141200
 n=1000000:  pi ≈ 3.141460
 n=10000000: pi ≈ 3.141573
-
+```
 Im większe `n` tym dokładniejszy wynik.
 
